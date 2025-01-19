@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+header{
+    height: 25vh;
+    width: 100vw;
+    background-color: rgb(242, 125, 107);
+    background-size: cover;
+}
+
+.header{
+    height: 25vh;
+    width: 100vw;
+    background-color: rgb(242, 125, 107);
+    background-size: cover; 
+}
+
+.nav-links li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+ 
+.nav-links li a{
+    color: aliceblue;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+}
+
+.nav-links li.non-active a:hover{
+    background-color: rgb(252, 173, 159);
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.1s ease;
+    
+}
+
+.nav-links li.active{
+    background-color: rgb(242, 125, 107);
+    border-radius: 8px;
+    transition-duration: 0.1s;
+    padding: 15px;
+    margin: 0.1rem;
+}
+
+.navbar{
+    position: absolute;
+    height: 50px;
+    width: 90%;
+    margin: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.logo{
+    color: rgb(243, 190, 135);
+
+}
+.navbar.logo{
+    box-shadow: 0 2px 3px rgba(0,0,0,.1);
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+.gallery{
+    width: 100vw;
+    height: 60vmin;
+    display: flex;
+    gap: 5px;
+    background-color: rgb(249, 216, 196);
+}
+
+.gallery img{
+    height: 100%;
+    flex: 1;
+    object-fit: cover;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.gallery img:hover{
+    flex: 5;
+}
+
+
+.animated-text{
+    font-size: 50px;
+    font-weight: 900;
+}
+.animated-text .span::before{
+    content: "Monuments";
+    color: rgb(243, 131, 131);
+    animation: words 20s infinite;
+}
+.animated-text .span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    background-color:  rgb(15, 12, 12);
+    border-left: 2px solid rgb(243, 131, 131);
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 2px solid black;
+    }
+}
+@keyframes words{
+    0%,25%{
+        content: "Monuments";
+    }
+    25%,50%{
+        content: "Sites";
+    }
+    50%,75%{
+        content: "Monuments";
+    }
+    75%,100%{
+        content: "Sites";
+    }
+}
+@keyframes typing{
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+
+h1{
+    text-align: center;
+    background-color: rgb(249, 216, 196);
+    color: rgb(150, 68, 118);
+    width: 100vw;
+}
+
+h2{
+    color: rgb(243, 82, 77);
+    text-align: center;
+}
+
+
+
+.text{
+    text-align: center;
+    font-size: large;
+    font-stretch: extra-expanded;
+    color: rgb(100, 78, 94);
+    margin-left: 30px;
+    
+}
+p{
+    font-size: large;
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+nav{
+    background-color: rgb(247, 217, 193);
+    width: 100vw;
+}
+main{
+    background-color: rgb(247, 217, 193);
+    width: 100vw;
+}
+aside{
+    background-color: rgb(247, 217, 193);
+    width: 100vw;
+}
+section{
+    background-color: rgb(247, 217, 193);
+    width: 100vw;
+}
+
+/* css de la première partie*/
+.container{
+    width: 100%;
+    max-width: 1170px;
+    display: grid;
+    overflow-x: hidden;
+    padding: 5rem 0; 
+    -ms-grid-column-align: center;
+    box-shadow: 0 4px 6px -1px rgba(14, 13, 13, 0.5);
+    margin-left: 40px;
+}
+.container .image1{
+    overflow: hidden;
+    width: 900px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 4px;
+}
+.image1 img{
+    width: 500px;
+    height: 500px;
+    margin-top: 20px;
+    text-align: center; 
+    border-radius: 10%; 
+    border-right: 300px; 
+    float: right;
+    margin-left: 300px;
+}
+
+/* css de la deuxième partie*/
+.content{
+    width: 100%;
+    max-width: 1170px;
+    display: grid;
+    overflow-x: hidden;
+    padding: 5rem 0; 
+    -ms-grid-column-align: center;
+    box-shadow: 0 4px 6px -1px rgba(14, 13, 13, 0.5);
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+}
+.content .image2{
+    overflow: hidden;
+    width: 900px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 30px;
+    text-align: center;
+    margin-bottom: 4px;
+}
+.image2 img{
+    width: 500px;
+    height: 500px;
+    border-radius: 10%;
+}
+
+/* css de la troisième partie*/
+.night{
+    width: 100%;
+    max-width: 1170px;
+    display: grid;
+    overflow-x: hidden;
+    padding: 5rem 0; 
+    -ms-grid-column-align: center;
+    box-shadow: 0 4px 6px -1px rgba(14, 13, 13, 0.5);
+    margin-left: 40px;
+}
+.night .image3{
+    overflow: hidden;
+    width: 900px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 4px;
+}
+.image3 img{
+    width: 500px;
+    height: 500px;
+    float: right;
+    text-align: center; 
+    border-radius: 10%; 
+    border-right: 300px;
+    margin-left: 300px;
+    margin-top: 20px;
+}
+
+
+/* css de la quatrième partie*/
+.tourist{
+    width: 100%;
+    max-width: 1170px;
+    display: grid;
+    overflow-x: hidden;
+    padding: 5rem 0; 
+    -ms-grid-column-align: center;
+    box-shadow: 0 4px 6px -1px rgba(14, 13, 13, 0.5);
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+}
+.tourist .image4{
+    overflow: hidden;
+    width: 900px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 30px;
+    text-align: center;
+}
+.image4 img{
+    width: 500px;
+    height: 500px;
+    border-radius: 10%;
+}
